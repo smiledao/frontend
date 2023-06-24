@@ -5,7 +5,6 @@
     } else {
       document.getElementById("question1").classList.add("hidden");
       // document.getElementById("content").classList.remove("hidden");
-      startCamera();
       document.getElementById("finalMessage").innerText =
         "Then, no worries!";
     }
@@ -18,10 +17,8 @@
       document.getElementById("finalMessage").innerText =
         "Okay then go do it!";
 
-      startCamera();
     } else {
       document.getElementById("finalMessage").innerText =
         "Then, no worries!";
-      startCamera();
     }
   }
