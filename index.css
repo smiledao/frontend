@@ -114,6 +114,13 @@
 
 .question-container {
   position: absolute;
+  top: 80%;
+  width: 100%;
+  text-align: center;
+}
+
+.topimage {
+  position: absolute;
   top: 20%;
   width: 100%;
   text-align: center;
