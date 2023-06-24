@@ -4,7 +4,7 @@ document.getElementById("questionText").innerHTML = question1;
 
 function clickNo() {
   if (document.getElementById("questionText").innerHTML === question2) {
-    location.replace("pages/smiley.html");
+    clickYes()
   }
   
   if (document.getElementById("questionText").innerHTML === question1 ) {
@@ -14,5 +14,5 @@ function clickNo() {
 }
 
 function clickYes() {
-    location.replace("pages/smiley.html");
+    location.replace("pages/smile.html");
 }
