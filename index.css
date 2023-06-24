@@ -48,9 +48,9 @@
 
 .buttonGreen {
   background-color: #000000;
-  color: #00ff08;
+  color: #00ff00;
   border-style: solid;
-  border-color: #00ff08;
+  border-color: #00ff00;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -59,10 +59,10 @@
 }
 
 .buttonGreen:hover {
-  background-color: #00ff08;
+  background-color: #00ff00;
   color: #000000;
   border-style: solid;
-  border-color: #00ff08;
+  border-color: #00ff00;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
