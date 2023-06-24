@@ -26,18 +26,18 @@
 
     <div class="question-container">
       <div id="question1">
-        <p style="color: white">Are you happy?</p>
-        <button class="btn buttonGreen" onclick="handleQuestion1('yes')">Yes</button>
-        <button class="btn buttonRed" onclick="handleQuestion1('no')">No</button>
+        <p style="color:white" id="questionText"></p>
+
+        <!-- <form action="pages/smiley.html"> -->
+        <button class="btn buttonGreen" onclick="clickYes()">Yes</button>
+        <button class="btn buttonRed" onclick="clickNo()">No</button>
+        <!-- </form> -->
       </div>
 
-      <div id="question2" class="hidden">
-        <p style="color: white">Is it something you can do about it?</p>
-        <button class="btn buttonGreen" onclick="handleQuestion2('yes')">Yes</button>
-        <button class="btn buttonRed" onclick="handleQuestion2('no')">No</button>
+    
+      <div id="finalMessage" style="color: white; text-align: center">
+       
       </div>
-
-      <div id="finalMessage" style="color: white; text-align: center"></div>
 
     </div>
    

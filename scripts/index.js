@@ -1,24 +1,18 @@
-  function handleQuestion1(answer) {
-    if (answer === "no") {
-      document.getElementById("question1").classList.add("hidden");
-      document.getElementById("question2").classList.remove("hidden");
-    } else {
-      document.getElementById("question1").classList.add("hidden");
-      // document.getElementById("content").classList.remove("hidden");
-      document.getElementById("finalMessage").innerText =
-        "Then, no worries!";
-    }
-  }
+const question1 = "Are you happy?";
+const question2 = "Is this something you can control?";
+document.getElementById("questionText").innerHTML = question1;
 
-  function handleQuestion2(answer) {
-    document.getElementById("question2").classList.add("hidden");
-    // document.getElementById("content").classList.remove("hidden");
-    if (answer === "yes") {
-      document.getElementById("finalMessage").innerText =
-        "Okay then go do it!";
-
-    } else {
-      document.getElementById("finalMessage").innerText =
-        "Then, no worries!";
-    }
+function clickNo() {
+  if (document.getElementById("questionText").innerHTML === question2) {
+    location.replace("pages/smiley.html");
   }
+  
+  if (document.getElementById("questionText").innerHTML === question1 ) {
+    document.getElementById("questionText").innerHTML = question2;
+    //return;
+  } 
+}
+
+function clickYes() {
+    location.replace("pages/smiley.html");
+}
