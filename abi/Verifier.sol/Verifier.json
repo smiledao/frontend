@@ -1,0 +1,313 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "uint256[]",
+          "name": "pubInputs",
+          "type": "uint256[]"
+        },
+        {
+          "internalType": "bytes",
+          "name": "proof",
+          "type": "bytes"
+        }
+      ],
+      "name": "verify",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x608060405234801561001057600080fd5b5061020f806100206000396000f3fe608060405234801561001057600080fd5b506004361061002b5760003560e01c8063bd205a9014610030575b600080fd5b61004661003e366004610111565b600192915050565b604051901515815260200160405180910390f35b634e487b7160e01b600052604160045260246000fd5b604051601f8201601f1916810167ffffffffffffffff811182821017156100995761009961005a565b604052919050565b600082601f8301126100b257600080fd5b813567ffffffffffffffff8111156100cc576100cc61005a565b6100df601f8201601f1916602001610070565b8181528460208386010111156100f457600080fd5b816020850160208301376000918101602001919091529392505050565b6000806040838503121561012457600080fd5b823567ffffffffffffffff8082111561013c57600080fd5b818501915085601f83011261015057600080fd5b81356020828211156101645761016461005a565b8160051b610173828201610070565b928352848101820192828101908a85111561018d57600080fd5b958301955b848710156101ab57863582529583019590830190610192565b97505050860135925050808211156101c257600080fd5b506101cf858286016100a1565b915050925092905056fea26469706673582212203b6ea2ccadc779b93fd922d71eb767e22a8a4026230f872919b80cd36389c25a64736f6c63430008120033",
+    "sourceMap": "57:163:65:-:0;;;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x608060405234801561001057600080fd5b506004361061002b5760003560e01c8063bd205a9014610030575b600080fd5b61004661003e366004610111565b600192915050565b604051901515815260200160405180910390f35b634e487b7160e01b600052604160045260246000fd5b604051601f8201601f1916810167ffffffffffffffff811182821017156100995761009961005a565b604052919050565b600082601f8301126100b257600080fd5b813567ffffffffffffffff8111156100cc576100cc61005a565b6100df601f8201601f1916602001610070565b8181528460208386010111156100f457600080fd5b816020850160208301376000918101602001919091529392505050565b6000806040838503121561012457600080fd5b823567ffffffffffffffff8082111561013c57600080fd5b818501915085601f83011261015057600080fd5b81356020828211156101645761016461005a565b8160051b610173828201610070565b928352848101820192828101908a85111561018d57600080fd5b958301955b848710156101ab57863582529583019590830190610192565b97505050860135925050808211156101c257600080fd5b506101cf858286016100a1565b915050925092905056fea26469706673582212203b6ea2ccadc779b93fd922d71eb767e22a8a4026230f872919b80cd36389c25a64736f6c63430008120033",
+    "sourceMap": "57:163:65:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;81:137;;;;;;:::i;:::-;209:4;81:137;;;;;;;;2277:14:66;;2270:22;2252:41;;2240:2;2225:18;81:137:65;;;;;;;14:127:66;75:10;70:3;66:20;63:1;56:31;106:4;103:1;96:15;130:4;127:1;120:15;146:275;217:2;211:9;282:2;263:13;;-1:-1:-1;;259:27:66;247:40;;317:18;302:34;;338:22;;;299:62;296:88;;;364:18;;:::i;:::-;400:2;393:22;146:275;;-1:-1:-1;146:275:66:o;426:530::-;468:5;521:3;514:4;506:6;502:17;498:27;488:55;;539:1;536;529:12;488:55;575:6;562:20;601:18;597:2;594:26;591:52;;;623:18;;:::i;:::-;667:55;710:2;691:13;;-1:-1:-1;;687:27:66;716:4;683:38;667:55;:::i;:::-;747:2;738:7;731:19;793:3;786:4;781:2;773:6;769:15;765:26;762:35;759:55;;;810:1;807;800:12;759:55;875:2;868:4;860:6;856:17;849:4;840:7;836:18;823:55;923:1;898:16;;;916:4;894:27;887:38;;;;902:7;426:530;-1:-1:-1;;;426:530:66:o;961:1146::-;1063:6;1071;1124:2;1112:9;1103:7;1099:23;1095:32;1092:52;;;1140:1;1137;1130:12;1092:52;1180:9;1167:23;1209:18;1250:2;1242:6;1239:14;1236:34;;;1266:1;1263;1256:12;1236:34;1304:6;1293:9;1289:22;1279:32;;1349:7;1342:4;1338:2;1334:13;1330:27;1320:55;;1371:1;1368;1361:12;1320:55;1407:2;1394:16;1429:4;1452:2;1448;1445:10;1442:36;;;1458:18;;:::i;:::-;1504:2;1501:1;1497:10;1527:28;1551:2;1547;1543:11;1527:28;:::i;:::-;1589:15;;;1659:11;;;1655:20;;;1620:12;;;;1687:19;;;1684:39;;;1719:1;1716;1709:12;1684:39;1743:11;;;;1763:142;1779:6;1774:3;1771:15;1763:142;;;1845:17;;1833:30;;1796:12;;;;1883;;;;1763:142;;;1924:5;-1:-1:-1;;;1967:18:66;;1954:32;;-1:-1:-1;;1998:16:66;;;1995:36;;;2027:1;2024;2017:12;1995:36;;2050:51;2093:7;2082:8;2071:9;2067:24;2050:51;:::i;:::-;2040:61;;;961:1146;;;;;:::o",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "verify(uint256[],bytes)": "bd205a90"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.18+commit.87f61d96\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256[]\",\"name\":\"pubInputs\",\"type\":\"uint256[]\"},{\"internalType\":\"bytes\",\"name\":\"proof\",\"type\":\"bytes\"}],\"name\":\"verify\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"src/Verifier.sol\":\"Verifier\"},\"evmVersion\":\"paris\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\"]},\"sources\":{\"src/Verifier.sol\":{\"keccak256\":\"0x7286bc373a8481839729d69e4d7a3ce4a9bfabfad089dfe95b4570803587d56d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://53da2e671d08fc57c1988e4474bb65340ee8aa619dfd9d4b3f0f3e3d240e4f33\",\"dweb:/ipfs/QmcS1mgFFETdFaGJ1rZu4uja97DdNVMN4Ukf7eeTELz5mG\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.18+commit.87f61d96"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint256[]",
+              "name": "pubInputs",
+              "type": "uint256[]"
+            },
+            {
+              "internalType": "bytes",
+              "name": "proof",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "verify",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {},
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        ":openzeppelin/=lib/openzeppelin-contracts/contracts/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "src/Verifier.sol": "Verifier"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "src/Verifier.sol": {
+        "keccak256": "0x7286bc373a8481839729d69e4d7a3ce4a9bfabfad089dfe95b4570803587d56d",
+        "urls": [
+          "bzz-raw://53da2e671d08fc57c1988e4474bb65340ee8aa619dfd9d4b3f0f3e3d240e4f33",
+          "dweb:/ipfs/QmcS1mgFFETdFaGJ1rZu4uja97DdNVMN4Ukf7eeTELz5mG"
+        ],
+        "license": "MIT"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "src/Verifier.sol",
+    "id": 37810,
+    "exportedSymbols": {
+      "Verifier": [
+        37809
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:189:65",
+    "nodes": [
+      {
+        "id": 37795,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:65",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".18"
+        ]
+      },
+      {
+        "id": 37809,
+        "nodeType": "ContractDefinition",
+        "src": "57:163:65",
+        "nodes": [
+          {
+            "id": 37808,
+            "nodeType": "FunctionDefinition",
+            "src": "81:137:65",
+            "nodes": [],
+            "body": {
+              "id": 37807,
+              "nodeType": "Block",
+              "src": "194:24:65",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "hexValue": "74727565",
+                    "id": 37805,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "kind": "bool",
+                    "lValueRequested": false,
+                    "nodeType": "Literal",
+                    "src": "209:4:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "value": "true"
+                  },
+                  "functionReturnParameters": 37804,
+                  "id": 37806,
+                  "nodeType": "Return",
+                  "src": "202:11:65"
+                }
+              ]
+            },
+            "functionSelector": "bd205a90",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "verify",
+            "nameLocation": "90:6:65",
+            "parameters": {
+              "id": 37801,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 37798,
+                  "mutability": "mutable",
+                  "name": "pubInputs",
+                  "nameLocation": "123:9:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 37808,
+                  "src": "106:26:65",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 37796,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "106:7:65",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 37797,
+                    "nodeType": "ArrayTypeName",
+                    "src": "106:9:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 37800,
+                  "mutability": "mutable",
+                  "name": "proof",
+                  "nameLocation": "155:5:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 37808,
+                  "src": "142:18:65",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 37799,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "142:5:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "96:70:65"
+            },
+            "returnParameters": {
+              "id": 37804,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 37803,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 37808,
+                  "src": "188:4:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 37802,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "188:4:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "187:6:65"
+            },
+            "scope": 37809,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "Verifier",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          37809
+        ],
+        "name": "Verifier",
+        "nameLocation": "66:8:65",
+        "scope": 37810,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 65
+}
