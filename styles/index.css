@@ -140,7 +140,7 @@
 }
 
 .video-container::after {
-  content: url("images/noggles.png");
+  content: url("../images/noggles.png");
   display: block;
   position: absolute;
   top: 50%;
