@@ -155,3 +155,7 @@ async function enableMetamaskOnSepolia() {
     }
   }
 }
+
+function loadImg(){
+  $('#frame').attr('src', URL.createObjectURL(event.target.files[0]));
+}
