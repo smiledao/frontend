@@ -1,4 +1,4 @@
-Test website with Metamask.
+Test website with Metamask and other stuff.
 
 Run locally for testing with:
 
