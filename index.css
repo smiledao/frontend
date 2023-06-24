@@ -46,6 +46,55 @@
   font-size: 16px;
 }
 
+.buttonGreen {
+  background-color: #000000;
+  color: #00ff08;
+  border-style: solid;
+  border-color: #00ff08;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.buttonGreen:hover {
+  background-color: #00ff08;
+  color: #000000;
+  border-style: solid;
+  border-color: #00ff08;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+.buttonRed {
+  background-color: #000000;
+  color: #ff0000;
+  border-style: solid;
+  border-color: #ff0000;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.buttonRed:hover {
+  background-color: #ff0000;
+  color: #000000;
+  border-style: solid;
+  border-color: #ff0000;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
 .container {
   position: relative;
   padding: 30px;
