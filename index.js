@@ -13,9 +13,8 @@ const provider = new ethers.providers.Web3Provider(window.ethereum); //Imported 
 
 // const signer = provider.getSigner(); //Do this when the user clicks "enableEthereumButton" which will call getAccount() to get the signer private key for the provider.  
  
-const contractAddress_JS = '0x4a5847977288eDc46F8961817f82b6cEDD5FA2c8'
-const contractABI_JS = [{"inputs":[],"name":"setMember","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[{"internalType":"address","name":"","type":"address"}],"name":"smileDaoMember","outputs":[{"internalType":"bool","name":"","type":"bool"}],"stateMutability":"view","type":"function"}]
-
+const contractAddress_JS = '0xBBE97Afb978E19033e0BDa692E6034F5b3B91312'
+const contractABI_JS = [{"anonymous":false,"inputs":[],"name":"setEvent","type":"event"},{"inputs":[{"internalType":"uint256","name":"x","type":"uint256"}],"name":"set","outputs":[],"stateMutability":"nonpayable","type":"function"},{"inputs":[],"name":"storedData","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"stateMutability":"view","type":"function"}]
 
 const contractDefined_JS = new ethers.Contract(contractAddress_JS, contractABI_JS, provider);
 
@@ -32,7 +31,7 @@ async function getDataOnChainToLoad(){
     getStoredData()
   }
   if(chainIdConnected != sepoliaChainId){
-    document.getElementById("getValueStateSmartContract").innerHTML =  "Install Metamask and select sepolia Testnet to have a Web3 provider to read blockchain data."
+    document.getElementById("getValueStateSmartContract").innerHTML =  "Install Metamask and select Sepolia Testnet to have a Web3 provider to read blockchain data."
   }
 
 }
@@ -40,7 +39,7 @@ async function getDataOnChainToLoad(){
 async function getStoredData() {
   let storedDataCallValue = await contractDefined_JS.storedData()
   if(storedDataCallValue === undefined){
-    document.getElementById("getValueStateSmartContract").innerHTML =  "Install Metamask and select sepolia Testnet to have a Web3 provider to read blockchain data."
+    document.getElementById("getValueStateSmartContract").innerHTML =  "Install Metamask and select Sepolia Testnet to have a Web3 provider to read blockchain data."
   }
   else{
     document.getElementById("getValueStateSmartContract").innerHTML =  storedDataCallValue
@@ -68,13 +67,17 @@ async function sentTxAsync(x) {
     
 }
 
+contractDefined_JS.on("setEvent", () => {
 
+  getStoredData()
+
+});
 
 //Connect to Metamask.
 const ethereumButton = document.querySelector('#enableEthereumButton');
 ethereumButton.addEventListener('click', () => {
     detectMetamaskInstalled()
-    enableMetamaskOnsepolia()
+    enableMetamaskOnSepolia()
 });
 
 // MODIFY CONTRACT STATE WITH SET FUNCTION WITH PREDEFINED DATA FROM WEB3.JS
@@ -105,7 +108,7 @@ function detectMetamaskInstalled(){
   }
   catch(missingMetamask) {
      alert("Metamask not detected in browser! Install Metamask browser extension, then refresh page!")
-     document.getElementById("getValueStateSmartContract").innerHTML =  "Install Metamask and select sepolia Testnet to have a Web3 provider to read blockchain data."
+     document.getElementById("getValueStateSmartContract").innerHTML =  "Install Metamask and select Sepolia Testnet to have a Web3 provider to read blockchain data."
 
   }
 
@@ -132,17 +135,17 @@ async function getAccount() {
   document.getElementById("enableEthereumButton").innerText = accounts[0].substr(0,5) + "..." +  accounts[0].substr(38,4)  
 }
 
-async function enableMetamaskOnsepolia() {
+async function enableMetamaskOnSepolia() {
   //Get account details from Metamask wallet.
   getAccount();
-  //Check if user is on the sepolia testnet. If not, alert them to change to Goerl
+  //Check if user is on the Sepolia testnet. If not, alert them to change to Sepolia.
   if(window.ethereum.networkVersion != sepoliaChainId){
-    // alert("You are not on the sepolia Testnet! Please switch to sepolia and refresh page.")
+    // alert("You are not on the Sepolia Testnet! Please switch to Sepolia and refresh page.")
     try{
       await window.ethereum.request({
           method: "wallet_switchEthereumChain",
           params: [{
-             chainId: "0x5"
+             chainId: "0xaa36a7"
           }]
         })
       location.reload(); 
