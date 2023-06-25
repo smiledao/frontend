@@ -12,7 +12,7 @@ async function runFrontend() {
     "Connect Metamask 🦊";
   document.getElementById("getValueStateSmartContract").innerHTML = "Connect wallet to see if you are part of the Smile DAO...";
 
-  const sepoliaChainId = 100;
+  const gnosisChainId = 100;
 
   const provider = new ethers.providers.Web3Provider(window.ethereum); //Imported ethers from index.html with "<script src="https://cdn.ethers.io/lib/ethers-5.6.umd.min.js" type="text/javascript"></script>".
 
@@ -52,12 +52,12 @@ async function runFrontend() {
   async function getDataOnChainToLoad() {
     let chainIdConnected = await getChainIdConnected();
 
-    if (chainIdConnected == sepoliaChainId) {
+    if (chainIdConnected == gnosisChainId) {
       // getStoredData();
     }
-    if (chainIdConnected != sepoliaChainId) {
+    if (chainIdConnected != gnosisChainId) {
       document.getElementById("getValueStateSmartContract").innerHTML =
-        "Install Metamask and select Sepolia Testnet to have a Web3 provider to read blockchain data.";
+        "Install Metamask and select Gnosis Testnet to have a Web3 provider to read blockchain data.";
     }
   }
 
@@ -65,7 +65,7 @@ async function runFrontend() {
   //   let storedDataCallValue = await contractDefined_JS.clock(accounts[]);
   //   if (storedDataCallValue === undefined) {
   //     document.getElementById("getValueStateSmartContract").innerHTML =
-  //       "Install Metamask and select Sepolia Testnet to have a Web3 provider to read blockchain data.";
+  //       "Install Metamask and select Gnosis Testnet to have a Web3 provider to read blockchain data.";
   //   } else {
   //     document.getElementById("getValueStateSmartContract").innerHTML =
   //       storedDataCallValue;
@@ -76,7 +76,7 @@ async function runFrontend() {
     let storedDataCallValue = await contractDefined_JS.balanceOf(accounts[0]);
     if (storedDataCallValue === undefined) {
       document.getElementById("getValueStateSmartContract").innerHTML =
-        "Install Metamask and select Sepolia Testnet to have a Web3 provider to read blockchain data.";
+        "Install Metamask and select Gnosis Testnet to have a Web3 provider to read blockchain data.";
     } else {
       document.getElementById("getValueStateSmartContract").innerHTML = storedDataCallValue;
     }
@@ -113,7 +113,7 @@ async function runFrontend() {
   const ethereumButton = document.querySelector("#enableEthereumButton");
   ethereumButton.addEventListener("click", () => {
     detectMetamaskInstalled();
-    enableMetamaskOnSepolia();
+    enableMetamaskOnGnosis();
   });
 
   // MODIFY CONTRACT STATE WITH SET FUNCTION WITH PREDEFINED DATA FROM WEB3.JS
@@ -134,7 +134,7 @@ async function runFrontend() {
         "Metamask not detected in browser! Install Metamask browser extension, then refresh page!"
       );
       document.getElementById("getValueStateSmartContract").innerHTML =
-        "Install Metamask and select Sepolia Testnet to have a Web3 provider to read blockchain data.";
+        "Install Metamask and select Gnosis to have a Web3 provider to read blockchain data.";
     }
   }
 
@@ -161,12 +161,12 @@ async function runFrontend() {
       accounts[0].substr(0, 5) + "..." + accounts[0].substr(38, 4);
   }
 
-  async function enableMetamaskOnSepolia() {
+  async function enableMetamaskOnGnosis() {
     //Get account details from Metamask wallet.
     getAccount();
-    //Check if user is on the Sepolia testnet. If not, alert them to change to Sepolia.
-    if (window.ethereum.networkVersion != sepoliaChainId) {
-      // alert("You are not on the Sepolia Testnet! Please switch to Sepolia and refresh page.")
+    //Check if user is on the Gnosis testnet. If not, alert them to change to Gnosis.
+    if (window.ethereum.networkVersion != gnosisChainId) {
+      // alert("You are not on the Gnosis! Please switch to Gnosis and refresh page.")
       try {
         await window.ethereum.request({
           method: "wallet_switchEthereumChain",
@@ -177,11 +177,11 @@ async function runFrontend() {
           ],
         });
         location.reload();
-        // alert("Failed to add the network at chainId " + sepoliaChainId + " with wallet_addEthereumChain request. Add the network with https://chainlist.org/ or do it manually. Error log: " + error.message)
+        // alert("Failed to add the network at chainId " + gnosisaChainId + " with wallet_addEthereumChain request. Add the network with https://chainlist.org/ or do it manually. Error log: " + error.message)
       } catch (error) {
         alert(
           "Failed to add the network at chainId " +
-            sepoliaChainId +
+            gnosisChainId +
             " with wallet_addEthereumChain request. Add the network with https://chainlist.org/ or do it manually. Error log: " +
             error.message
         );
