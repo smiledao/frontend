@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+  <head>
+    <title>User Smile</title>
+    <link rel="shortcut icon" type="png" href="../images/favicon.ico" />
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type" />
+    <meta content="utf-8" http-equiv="encoding" />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: black">
+    <div style="min-height: 5vh"></div>
+
+
+      <div class="container">
+        <div class="center">
+          <div class="video-container">
+            <video id="video-preview"></video>
+            <button onclick="takePhoto()">take photo</button>
+          </div>
+        </div>
+      </div>
+
+      <div style="min-height: 5vh"></div>
+
+      <div class="question-container">
+        <div id="question1">
+          <form action="smartContractInterface.html">
+            <input type="submit" class="btn buttonGreen" value="Contract Interaction" />
+          </form>
+        </div>
+      </div>
+
+    <!-- <body>
+    <input type="file" accept="image/" onchange="loadImg()"><br/>
+    <img id="frame"  width="100px" height="100px"/>
+    </body> -->
+
+    <script src="../scripts/webcam.js"></script>
+  </body>
+</html>
