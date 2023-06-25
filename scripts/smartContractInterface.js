@@ -12,7 +12,7 @@ async function runFrontend() {
     "Connect Metamask 🦊";
   document.getElementById("getValueStateSmartContract").innerHTML = "Connect wallet to see if you are part of the Smile DAO...";
 
-  const sepoliaChainId = 11155111;
+  const sepoliaChainId = 100;
 
   const provider = new ethers.providers.Web3Provider(window.ethereum); //Imported ethers from index.html with "<script src="https://cdn.ethers.io/lib/ethers-5.6.umd.min.js" type="text/javascript"></script>".
 
@@ -187,7 +187,7 @@ async function runFrontend() {
           method: "wallet_switchEthereumChain",
           params: [
             {
-              chainId: "0xaa36a7",
+              chainId: "0x100",
             },
           ],
         });
