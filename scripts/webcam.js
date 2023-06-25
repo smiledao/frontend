@@ -35,6 +35,11 @@ function takePhoto() {
 
   let image = ctx.getImageData(0, 0, canvas.width, canvas.height);
   console.log("Image taken: ", image);
+  if (image) {
+    videoElement.pause();
+    window.alert("Image taken");
+    
+  }
 }
 
 
