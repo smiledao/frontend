@@ -18,7 +18,7 @@ async function runFrontend() {
 
   // const signer = provider.getSigner(); //Do this when the user clicks "enableEthereumButton" which will call getAccount() to get the signer private key for the provider.
 
-  const contractAddress_JS = "0xF2D1f6B68D6A72457D434dC51727C413C0dcd159";
+  const contractAddress_JS = "0x44a723162fDdBf045022dD6458999C7E860e7EF1";
   const contractABI_JS = await getContractAbi();
   console.log(contractABI_JS)
 
