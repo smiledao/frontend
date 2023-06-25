@@ -10,7 +10,7 @@ async function runFrontend() {
   let accounts = []; ////Empty array to be filled once Metamask is called.
   document.getElementById("enableEthereumButton").innerHTML =
     "Connect Metamask 🦊";
-  document.getElementById("getValueStateSmartContract").innerHTML = "Loading...";
+  document.getElementById("getValueStateSmartContract").innerHTML = "Connect wallet to see if you are part of the Smile DAO...";
 
   const sepoliaChainId = 11155111;
 
@@ -53,7 +53,7 @@ async function runFrontend() {
     let chainIdConnected = await getChainIdConnected();
 
     if (chainIdConnected == sepoliaChainId) {
-      getStoredData();
+      // getStoredData();
     }
     if (chainIdConnected != sepoliaChainId) {
       document.getElementById("getValueStateSmartContract").innerHTML =
@@ -61,14 +61,24 @@ async function runFrontend() {
     }
   }
 
-  async function getStoredData() {
-    let storedDataCallValue = await contractDefined_JS.clock();
+  // async function getStoredData() {
+  //   let storedDataCallValue = await contractDefined_JS.clock(accounts[]);
+  //   if (storedDataCallValue === undefined) {
+  //     document.getElementById("getValueStateSmartContract").innerHTML =
+  //       "Install Metamask and select Sepolia Testnet to have a Web3 provider to read blockchain data.";
+  //   } else {
+  //     document.getElementById("getValueStateSmartContract").innerHTML =
+  //       storedDataCallValue;
+  //   }
+  // }
+
+  async function getWalletConnectedBalance() {
+    let storedDataCallValue = await contractDefined_JS.balanceOf(accounts[0]);
     if (storedDataCallValue === undefined) {
       document.getElementById("getValueStateSmartContract").innerHTML =
         "Install Metamask and select Sepolia Testnet to have a Web3 provider to read blockchain data.";
     } else {
-      document.getElementById("getValueStateSmartContract").innerHTML =
-        storedDataCallValue;
+      document.getElementById("getValueStateSmartContract").innerHTML = storedDataCallValue;
     }
   }
 
@@ -97,6 +107,7 @@ async function runFrontend() {
   // contractDefined_JS.on("setEvent", () => {
   //   getStoredData();
   // });
+  
 
   //Connect to Metamask.
   const ethereumButton = document.querySelector("#enableEthereumButton");
@@ -159,6 +170,7 @@ async function runFrontend() {
 
   async function getAccount() {
     accounts = await ethereum.request({ method: "eth_requestAccounts" });
+    getWalletConnectedBalance();
     const signer = provider.getSigner();
     document.getElementById("enableEthereumButton").innerText =
       accounts[0].substr(0, 5) + "..." + accounts[0].substr(38, 4);
