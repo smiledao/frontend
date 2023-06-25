@@ -1,5 +1,5 @@
 const question1 = "Are you happy?";
-const question2 = "Is this something you can control?";
+const question2 = "Are you unhappy because of something that is out of your control?";
 document.getElementById("questionText").innerHTML = question1;
 
 function clickNo() {
