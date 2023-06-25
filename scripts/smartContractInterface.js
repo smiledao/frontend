@@ -187,7 +187,7 @@ async function runFrontend() {
           method: "wallet_switchEthereumChain",
           params: [
             {
-              chainId: "0x100",
+              chainId: "0x64",
             },
           ],
         });
