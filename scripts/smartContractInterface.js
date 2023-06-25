@@ -20,7 +20,7 @@ async function runFrontend() {
 
   const contractAddress_JS = "0x2cF2d8418F713EaA5c4DB676aC7D5FC05A57C632";
   const contractABI_JS = await getContractAbi();
-  console.log(contractABI_JS)
+  // console.log(contractABI_JS)
 
   // const contractABI_JS = "hi"
 
@@ -31,7 +31,7 @@ async function runFrontend() {
     const response = await fetch('../abi/SmileNFT.sol/SmileNFT.json');
     const responseJson = await response.json();
     const contractABI_JS = responseJson.abi;
-    console.log(contractABI_JS)
+    // console.log(contractABI_JS)
     return contractABI_JS;
 
     // console.log(contractABI_JS.)
@@ -122,22 +122,7 @@ async function runFrontend() {
   );
   changeStateInContractEvent.addEventListener("click", () => {
     checkAddressMissingMetamask();
-
-    var inputContractText = document
-      .getElementById("setValueSmartContract")
-      .value.toString();
-
-    if (/^\d+$/.test(inputContractText) == false) {
-      alert("Can only accept numeric characters.");
-      return;
-    }
-
-    if (BigInt(inputContractText) > BigInt(2 ** 256) - BigInt(1)) {
-      alert("Value is larger than uin256 max value ((2^256)-1).");
-      return;
-    }
-
-    sentTxAsync(inputContractText);
+    sentTxAsync();
   });
 
   //If Metamask is not detected the user will be told to install Metamask.
