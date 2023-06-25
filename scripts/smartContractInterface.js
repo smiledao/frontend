@@ -62,7 +62,7 @@ async function runFrontend() {
   }
 
   async function getStoredData() {
-    let storedDataCallValue = await contractDefined_JS.storedData();
+    let storedDataCallValue = await contractDefined_JS.clock();
     if (storedDataCallValue === undefined) {
       document.getElementById("getValueStateSmartContract").innerHTML =
         "Install Metamask and select Sepolia Testnet to have a Web3 provider to read blockchain data.";
