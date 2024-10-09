@@ -5,11 +5,22 @@ https://smiledao.github.io/frontend/
 Test website with Metamask and other stuff.
 
 Run locally for testing with:
-
-       npm install http-server
+```shell
+npm install http-server
+```
 then
-
-       npx http-server
+```shell
+npx http-server
+```
 or
+```shell
+http-server
+```
 
-       http-server
+Milady Remilia Smiley Face Picture From:
+
+https://ilongfornetworkspirituality.net/
+
+Marcus Aurelius Stocism Quote From:
+
+https://www.azquotes.com/quote/469941
