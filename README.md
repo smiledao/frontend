@@ -1,6 +1,10 @@
-Live Website: 
+# Frontend
+
+## Website: 
 
 https://smiledao.github.io/frontend/
+
+## Run Locally 
 
 Test website with Metamask and other stuff.
 
@@ -17,10 +21,12 @@ or
 http-server
 ```
 
-Milady Remilia Smiley Face Picture From:
+## Image Sources
+
+### Milady Remilia Smiley Face
 
 https://ilongfornetworkspirituality.net/
 
-Marcus Aurelius Stocism Quote From:
+### Marcus Aurelius Stocism Quote
 
 https://www.azquotes.com/quote/469941
