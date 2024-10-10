@@ -1,17 +1,22 @@
 # Frontend
 
-## Website: 
+## Website Link
 
 https://smiledao.github.io/frontend/
 
-## Run Locally 
+## Run Website Locally 
 
 Test website with Metamask and other stuff.
+
+### Install
 
 Run locally for testing with:
 ```shell
 npm install http-server
 ```
+
+### Run
+
 then
 ```shell
 npx http-server
